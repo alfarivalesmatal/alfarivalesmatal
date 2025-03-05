@@ -1,0 +1,147 @@
+/* Style untuk body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('background\ web.jpg') no-repeat center center fixed; /* Background gambar */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Overlay gelap agar teks lebih jelas */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Transparansi 70% */
+    z-index: -1;
+}
+
+/* Container utama untuk form */
+.order-container {
+    background-color: rgba(255, 102, 0, 0.9); /* Oranye dengan transparansi */
+    padding: 25px 35px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Judul form */
+h2 {
+    color: #fff;
+    font-size: 26px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Deskripsi kecil */
+p {
+    color: #f4f4f4;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* Style untuk input field */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Style untuk input field */
+.input-group input {
+    width: calc(100% - 20px); /* Mengurangi sedikit lebar agar sejajar dengan tombol */
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #ff6600;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #222;
+    transition: border-color 0.3s ease, background 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Efek saat input difokuskan */
+.input-group input:focus {
+    border-color: white;
+    background: rgba(255, 255, 255, 1);
+    outline: none;
+    color: black;
+}
+
+
+/* Style untuk tombol Kirim */
+button {
+    background: #222; /* Warna gelap */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: #535353;
+    transform: scale(1.05);
+}
+
+/* Style untuk pesan sukses */
+.message {
+    color: white;
+    background-color: #28a745;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+    .order-container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .input-group label {
+        font-size: 13px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 12px;
+    }
+    
+    .input-group {
+        margin-bottom: 12px;
+    }
+}
